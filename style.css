@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 16px;
+    color: hsl(0, 36%, 70%);
+    line-height: 1.5;
+}
+
+.container {
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-wrapper {
+    text-align: center;
+    padding: 2em;
+}
+
+h1 {
+    text-transform: uppercase;
+    line-height: 1.25;
+    letter-spacing: .5rem;
+    color: hsl(0, 6%, 24%);
+}
+
+h1 a {
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+.logo-mobile {
+    padding: 2em;
+}
+
+.photo-desktop {
+    display: none;
+}
+
+.logo-desktop {
+    display: none;
+}
+
+.input-block {
+    position: relative;
+    margin-top: 2em;
+}
+
+#email {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 25px;
+    height: 50px;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+#email:focus {
+	border-width: 2px;
+	box-shadow: 0px 0px 10px hsla(0, 36%, 70%, 0.5);
+	outline: none;
+}
+
+#email::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+#error-message {
+    color: hsl(0, 93%, 68%);
+    margin-top: 100px;
+}
+
+#error-icon {
+    color: hsl(0, 93%, 68%);
+    position: absolute;
+    top: 12px;
+    right: 110px;
+    display: none;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+    border-radius: 25px;
+    border: none;
+    background-image: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);    
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transition: opacity 0.5s linear;
+}
+
+button:focus {
+    outline: none;
+    opacity: 0.2;
+}
+
+@media (min-width: 400px) {
+    .container {
+        flex-direction: row;
+        background-image: url(images/bg-pattern-desktop.svg);
+    }
+
+    .logo-desktop {
+        display: block;
+        padding-bottom: 4em;
+    }
+
+    .photo-desktop {
+        display: block;
+        width: 50%;
+        object-fit: cover;
+        height: 100vh;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    .photo-mobile {
+        display: none;
+    }
+
+    .text-wrapper {
+        text-align: left;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 3em;
+        padding-right: 5em;
+        justify-content: center;
+    }
+}
+
