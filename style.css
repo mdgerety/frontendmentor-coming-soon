@@ -18,10 +18,16 @@ body {
 
 .container {
     background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 375px;
+    box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+}
+
+.photo-mobile {
+    object-fit: cover;
 }
 
 .text-wrapper {
@@ -82,6 +88,7 @@ h1 a {
 #error-message {
     color: hsl(0, 93%, 68%);
     margin-top: 100px;
+    display: none;
 }
 
 #error-icon {
@@ -111,10 +118,12 @@ button:focus {
     opacity: 0.2;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 600px) {
     .container {
         flex-direction: row;
         background-image: url(images/bg-pattern-desktop.svg);
+        max-width: 1200px;
+        max-height: 800px;
     }
 
     .logo-desktop {
@@ -124,9 +133,7 @@ button:focus {
 
     .photo-desktop {
         display: block;
-        width: 50%;
         object-fit: cover;
-        height: 100vh;
     }
 
     .logo-mobile {
@@ -145,6 +152,10 @@ button:focus {
         padding-left: 3em;
         padding-right: 5em;
         justify-content: center;
+    }
+
+    #error-message {
+        padding: 1em;
     }
 }
 
