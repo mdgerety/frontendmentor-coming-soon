@@ -17,6 +17,7 @@ form.addEventListener('submit', (e) => {
         icon.className = 'error-icon';
         message.className = 'error-message';
         alert('Success!');
+        email.value = '';
     }
 })
 
